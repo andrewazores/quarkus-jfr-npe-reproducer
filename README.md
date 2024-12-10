@@ -2,7 +2,12 @@
 
 Reproducer for https://github.com/quarkusio/quarkus/issues/44976
 
-To test:
+To automatically test:
+1. `quarkus test`
+2. `quarkus extension remove jfr`
+2. `quarkus extension add jfr`
+
+To manually test:
 1. `quarkus dev`
 2. `curl -v http://localhost:8080` -> should respond HTTP 302 Found
 3. `curl -v http://localhost:8080/hello` -> should respond HTTP 200 OK, with "Hello from Quarkus REST" body
